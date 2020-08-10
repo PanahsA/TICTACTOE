@@ -18,7 +18,15 @@ const usePersistedState = (key, initialState) => {
       'abt to return retrivedState, if its null it will retuen initial',
       retrievedState
     );
-    return retrievedState || initialState;
+
+    console.log(
+      (retrievedState && areKeysEqual(initialState, retrievedState)) ||
+        initialState
+    );
+    return (
+      (retrievedState && areKeysEqual(initialState, retrievedState)) ||
+      initialState
+    );
   });
 
   useEffect(() => {
