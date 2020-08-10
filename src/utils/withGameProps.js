@@ -3,7 +3,7 @@ import React from 'react';
 import { useGameModel, usePlayerModel, useTicTacToeModel } from '../models';
 
 const withGameProps = (WrappedComponent) => (props) => {
-  const { setPlayerName, reset, makeMove } = useGameModel();
+  const { setPlayerName, resetGame, makeMove } = useGameModel();
   const { player1, player2 } = usePlayerModel();
   const { squares, xIsNext, winner } = useTicTacToeModel();
   return (
@@ -14,7 +14,7 @@ const withGameProps = (WrappedComponent) => (props) => {
         player1={player1}
         player2={player2}
         setPlayerName={setPlayerName}
-        reset={reset}
+        resetGame={resetGame}
         makeMove={makeMove}
         squares={squares}
         {...props}

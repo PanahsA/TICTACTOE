@@ -1,9 +1,13 @@
+import { useDispatch } from 'react-redux';
 import useTicTacToeModel from './useTicTacToeModel';
 import usePlayerModel from './usePlayerModel';
+import { resetGameAction } from '../state/actions/game';
 
 const useGameModel = () => {
-  const { makeMove, resetGame } = useTicTacToeModel();
-  const { player1, player2, setPlayerName, resetPlayers } = usePlayerModel();
+  const dispatch = useDispatch();
+  const resetGame= ()=>{dispatch(resetGameAction())}
+  const { makeMove } = useTicTacToeModel();
+  const { player1, player2, setPlayerName } = usePlayerModel();
 
   const enhancedMakeMove = (position) => {
     if (!player1 || !player2) {
@@ -13,12 +17,16 @@ const useGameModel = () => {
     makeMove(position);
   };
 
-  const reset = () => {
-    resetPlayers();
-    resetGame();
-  };
+  // const reset = () => {
+  //   resetPlayers();
+  //   resetGame();
+  // };
 
-  return { setPlayerName, reset, makeMove: enhancedMakeMove, resetGame };
+  return {
+    setPlayerName,
+    makeMove: enhancedMakeMove,
+    resetGame: resetGame,
+  };
 };
 
 export default useGameModel;

@@ -4,6 +4,7 @@ import { Board, GameStatus, Player } from '../../components';
 
 import './game.css';
 
+
 const Game = ({
   winner,
   xIsNext,
@@ -12,8 +13,9 @@ const Game = ({
   squares,
   makeMove,
   setPlayerName,
-  reset,
+  resetGame
 }) => {
+
   return (
     <div className='game'>
       <GameStatus
@@ -44,7 +46,7 @@ const Game = ({
           }
         />
         <div className='row'>
-          <button type='button' onClick={() => reset()}>
+          <button type='button' onClick={() => resetGame()}>
             Reset
           </button>
         </div>
