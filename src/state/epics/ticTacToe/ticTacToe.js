@@ -7,9 +7,9 @@ import { manageMove } from '../../../utils';
 const ticTacToeEpic = (action$, state$) =>
   action$.pipe(
     ofType(makeMoveAction.type),
-    map(({ position }) => {
-      setGameAction(manageMove(state$, position));
-    })
+    map(({ position }) =>
+      setGameAction(manageMove(state$.value.ticTacToe, position))
+    )
   );
 
 export default ticTacToeEpic;
