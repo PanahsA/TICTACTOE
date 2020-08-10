@@ -1,6 +1,5 @@
 import React from 'react';
 
-// import { withPersistedState } from '../../utils';
 import { Board, GameStatus, Player } from '../../components';
 
 import './game.css';
@@ -14,7 +13,6 @@ const Game = ({
   makeMove,
   setPlayerName,
   reset,
-  store,
 }) => {
   return (
     <div className='game'>
