@@ -10,9 +10,11 @@ const initialState = {
 
 const useTicTacToeModel = () => {
   const [persistedState, setPersistedState] = usePersistedState(
-    'tictactoe',
+    'tictactoeReact',
     initialState
   );
+
+  console.log(persistedState);
 
   const setPlayerName = (id, name) => {
     setPersistedState({
