@@ -7,7 +7,7 @@ const useGameModel = () => {
 
   const enhancedMakeMove = (position) => {
     if (!player1 || !player2) {
-      alert();
+      alert('add names');
       return;
     }
     makeMove(position);
