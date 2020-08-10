@@ -14,8 +14,6 @@ const useTicTacToeModel = () => {
     initialState
   );
 
-  console.log(persistedState);
-
   const setPlayerName = (id, name) => {
     setPersistedState({
       ...persistedState,

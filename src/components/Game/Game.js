@@ -13,7 +13,6 @@ const Game = () => {
     setPlayerName,
     resetGame,
   } = useTicTacToeModel();
-  console.log(player1);
 
   return (
     <div className='game'>
