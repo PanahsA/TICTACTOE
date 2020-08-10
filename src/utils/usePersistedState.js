@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import areKeysEqual from './areKeysEqual';
 
 const usePersistedState = (key, initialState) => {
   const [persistedState, setPersistedState] = useState(() => {
