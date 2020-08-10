@@ -5,9 +5,11 @@ import { resetGameAction } from '../state/actions/game';
 
 const useGameModel = () => {
   const dispatch = useDispatch();
-  const resetGame= ()=>{dispatch(resetGameAction())}
   const { makeMove } = useTicTacToeModel();
   const { player1, player2, setPlayerName } = usePlayerModel();
+  const resetGame = () => {
+    dispatch(resetGameAction());
+  };
 
   const enhancedMakeMove = (position) => {
     if (!player1 || !player2) {
@@ -17,15 +19,10 @@ const useGameModel = () => {
     makeMove(position);
   };
 
-  // const reset = () => {
-  //   resetPlayers();
-  //   resetGame();
-  // };
-
   return {
     setPlayerName,
     makeMove: enhancedMakeMove,
-    resetGame: resetGame,
+    resetGame,
   };
 };
 

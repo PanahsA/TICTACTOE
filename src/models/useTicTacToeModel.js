@@ -1,9 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 
-import {
-  makeMoveAction,
-  resetTicTacToeAction,
-} from '../state/actions/ticTacToe';
+import { makeMoveAction } from '../state/actions/ticTacToe';
 import { squares, xIsNext, winner } from '../state/selectors';
 
 const useTicTacToe = () => {
@@ -14,7 +11,6 @@ const useTicTacToe = () => {
     xIsNext: useSelector(xIsNext),
     winner: useSelector(winner),
     makeMove: (position) => dispatch(makeMoveAction(position)),
-    resetGame: () => dispatch(resetTicTacToeAction()),
     foo: () => 'hi',
   };
 };
