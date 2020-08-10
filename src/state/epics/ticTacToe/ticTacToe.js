@@ -11,3 +11,5 @@ const ticTacToeEpic = (action$, state$) =>
       setGameAction(manageMove(state$, position));
     })
   );
+
+export default ticTacToeEpic;
