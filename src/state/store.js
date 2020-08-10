@@ -6,7 +6,7 @@ const initialState = {
   players: { player1: '', player2: '' },
   ticTacToe: { winner: null, squares: Array(9).fill(null), xIsNext: true },
 };
-const retreivedState = JSON.parse(localStorage.getItem('tictactoe'));
+const retreivedState = JSON.parse(localStorage.getItem('tictactoe'))||initialState;
 
 const store = createStore(
   rootReducer,
