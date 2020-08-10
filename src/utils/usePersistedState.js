@@ -11,7 +11,6 @@ const usePersistedState = (key, initialState) => {
 
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(persistedState));
-    console.log('useEff');
   });
   return [persistedState, setPersistedState];
 };
