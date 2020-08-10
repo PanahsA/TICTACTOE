@@ -1,7 +1,7 @@
 const persistStateMiddleware = (store) => (next) => (action) => {
   const result = next(action);
   const nextState = store.getState();
-  localStorage.setItem('tictactoeRedux', JSON.stringify(nextState));
+  localStorage.setItem('tictactoeRxJs', JSON.stringify(nextState));
   return result;
 };
 
