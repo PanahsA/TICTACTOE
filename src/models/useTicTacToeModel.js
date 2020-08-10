@@ -24,7 +24,6 @@ const useTicTacToeModel = () => {
   const makeMove = (position) => {
     const { player1, player2, winner, xIsNext, squares } =
       persistedState || initialState;
-    console.log(persistedState);
 
     // Game not ready to start
     if (!player1 || !player2) {
@@ -53,8 +52,6 @@ const useTicTacToeModel = () => {
   const resetGame = () => {
     setPersistedState(initialState);
   };
-
-  console.log(persistedState);
 
   return { persistedState, makeMove, setPlayerName, resetGame };
 };

@@ -1,18 +1,23 @@
 import { useState, useEffect } from 'react';
-function areKeysEqual(a, b) {
-  var aKeys = Object.keys(a).sort();
-  var bKeys = Object.keys(b).sort();
-  return aKeys.join('') === bKeys.join('');
-}
+import areKeysEqual from './areKeysEqual';
+
 const usePersistedState = (key, initialState) => {
   const [persistedState, setPersistedState] = useState(() => {
     const retrievedState = JSON.parse(localStorage.getItem(key));
-    if (!areKeysEqual(initialState, retrievedState)){
-      localStorage.setItem(key, JSON.stringify(initialState));
-    }
+    console.log(retrievedState);
     if (!retrievedState) {
       localStorage.setItem(key, JSON.stringify(initialState));
+      console.log('just setted initial state in place of null ');
+    } else if (!areKeysEqual(initialState, retrievedState)) {
+      localStorage.setItem(key, JSON.stringify(initialState));
+      console.log(
+        'to retreievd state dn exei idio format me to initial(exei xemeinei apo allou), settarw to initial'
+      );
     }
+    console.log(
+      'abt to return retrivedState, if its null it will retuen initial',
+      retrievedState
+    );
     return retrievedState || initialState;
   });
 
