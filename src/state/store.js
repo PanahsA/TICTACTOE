@@ -8,17 +8,19 @@ const initialState = {
 };
 const retreivedState = JSON.parse(localStorage.getItem('tictactoe'));
 
-function areKeysEqual() {
-  var aKeys = Object.keys(initialState).sort();
-  var bKeys = Object.keys(retreivedState).sort();
+function areKeysEqual(a, b) {
+  var aKeys = Object.keys(a).sort();
+  var bKeys = Object.keys(b).sort();
   return aKeys.join('') === bKeys.join('');
 }
 
-areKeysEqual();
-
+console.log(
+  areKeysEqual(initialState, retreivedState) ? retreivedState : initialState
+);
+console.log(retreivedState);
 const store = createStore(
   rootReducer,
-  areKeysEqual() ? retreivedState : initialState,
+  areKeysEqual(initialState,retreivedState) ? retreivedState : initialState,
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(
     applyMiddleware(persistStateMiddleware)
   )
