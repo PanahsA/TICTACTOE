@@ -1,1 +1,1 @@
-export { makeMoveAction, resetTicTacToeAction } from './ticTacToe';
+export { makeMoveAction, resetTicTacToeAction,setGameAction } from './ticTacToe';
