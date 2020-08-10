@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
-import { persistStateMiddleware, areKeysEqual } from '../utils';
+import { persistStateMiddleware } from '../utils';
 import rootReducer from './reducers';
 
 const initialState = {
