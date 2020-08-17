@@ -14,7 +14,6 @@ const initialState = {
 };
 const retrievedState =
   JSON.parse(localStorage.getItem('tictactoeRxJs')) || initialState;
-  console.log(retrievedState)
 
 const store = createStore(
   rootReducer,
