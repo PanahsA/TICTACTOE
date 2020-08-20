@@ -1,7 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import { BoardConnect as Board, GameStatus, Player } from '../../components';
-
 
 import './game.css';
 
@@ -48,6 +47,5 @@ const Game = ({
     </div>
   );
 };
-
 
 export default Game;
