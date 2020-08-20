@@ -1,17 +1,18 @@
 import React, { useContext } from 'react';
 
-import { BoardConnect, GameStatus, Player } from '../../components';
-import { useTicTacToeModel } from '../../models';
+import { BoardConnect as Board, GameStatus, Player } from '../../components';
 
 // import {withPersistedState} from '../../utils'; this Hoc could be used to pass the state data as props
 
 import './game.css';
 
 const Game = ({
-  persistedState: { player1, player2, winner, xIsNext, squares },
-  makeMove,
+  player1,
+  player2,
   setPlayerName,
+  xIsNext,
   resetGame,
+  winner,
 }) => {
   return (
     <div className='game'>
@@ -22,7 +23,7 @@ const Game = ({
         player2={player2}
       />
       <div className='game-board'>
-        <BoardConnect />
+        <Board />
       </div>
       <div className='game-console'>
         <Player

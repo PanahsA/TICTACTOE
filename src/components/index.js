@@ -5,4 +5,4 @@ import Player from './Player';
 import { Game, GameConnect } from './Game';
 import App from './App';
 
-export { Square, Board, BoardConnect, GameStatus, Player, Game, App };
+export { Square, Board, BoardConnect, GameStatus, Player, Game,GameConnect, App };

@@ -4,7 +4,7 @@ import React, { useContext } from 'react';
 import { ticTacToeContext } from '../../models/ticTacToe';
 
 const BoardConect = () => {
-  const { squares, makeMove } = useContext(ticTacToeContext);
+  const { persistedState:{squares}, makeMove } = useContext(ticTacToeContext);
 
   return <Board squares={squares} makeMove={makeMove} />;
 };

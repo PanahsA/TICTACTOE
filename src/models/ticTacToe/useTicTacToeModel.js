@@ -10,7 +10,7 @@ const initialState = {
 
 const useTicTacToeModel = () => {
   const [persistedState, setPersistedState] = usePersistedState(
-    'tictactoeReact',
+    'tictactoeReactContext',
     initialState
   );
 

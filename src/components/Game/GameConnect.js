@@ -6,22 +6,19 @@ import { Game } from '../../components';
 
 const GameConnect = () => {
   const {
-    persistedState: { player1, player2, winner, xIsNext, squares },
-    makeMove,
+    persistedState: { player1, player2, winner, xIsNext },
     setPlayerName,
     resetGame,
   } = useContext(ticTacToeContext);
 
   return (
     <Game
-      stateData={{
-        player1,
-        player2,
-        winner,
-        xIsNext,
-        setPlayerName,
-        resetGame,
-      }}
+      player1={player1}
+      player2={player2}
+      winner={winner}
+      xIsNext={xIsNext}
+      setPlayerName={setPlayerName}
+      resetGame={resetGame}
     />
   );
 };
