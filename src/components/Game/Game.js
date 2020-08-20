@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 
 import { BoardConnect as Board, GameStatus, Player } from '../../components';
 
-// import {withPersistedState} from '../../utils'; this Hoc could be used to pass the state data as props
 
 import './game.css';
 
@@ -50,6 +49,5 @@ const Game = ({
   );
 };
 
-// const App= withPersistedState(Game)('tictactoe',initialState)
 
 export default Game;
