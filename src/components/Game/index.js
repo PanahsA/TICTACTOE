@@ -1,3 +1,4 @@
 import Game from './Game';
+import GameConnect from './GameConnect';
 
-export default Game;
+export { Game, GameConnect };

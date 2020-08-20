@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from 'react';
 
-import "./square.css";
 
-const Square = ({ value, onClick }) => (
-  <button className="square" onClick={onClick}>
-    {value}
-  </button>
-);
+import './square.css';
+
+const Square = ({ value, onClick }) => {
+
+  return (
+    <button className='square' onClick={onClick}>
+      {value}
+    </button>
+  );
+};
 
 export default Square;

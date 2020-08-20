@@ -1,4 +1,4 @@
-import { calculateWinner, usePersistedState } from '../utils';
+import { calculateWinner, usePersistedState } from '../../utils';
 
 const initialState = {
   winner: null,
