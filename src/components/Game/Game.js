@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { BoardConnect as Board, GameStatus, Player } from '../../components';
+import {
+  BoardConnect as Board,
+  GameStatusConnect as GameStatus,
+  Player,
+} from '../../components';
 
 import './game.css';
 
@@ -14,12 +18,7 @@ const Game = ({
 }) => {
   return (
     <div className='game'>
-      <GameStatus
-        winner={winner}
-        xIsNext={xIsNext}
-        player1={player1}
-        player2={player2}
-      />
+      <GameStatus />
       <div className='game-board'>
         <Board />
       </div>

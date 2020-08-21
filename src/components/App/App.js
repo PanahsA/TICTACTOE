@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { TicTacToeProvider } from '../../models';
-import {GameConnect} from '../Game';
+import { GameConnect } from '../Game';
 
-const App = () => (
-  <TicTacToeProvider>
-    <GameConnect />
-  </TicTacToeProvider>
-);
+const App = () => {
+  return (
+    <TicTacToeProvider>
+      <GameConnect />
+    </TicTacToeProvider>
+  );
+};
 
 export default App;
