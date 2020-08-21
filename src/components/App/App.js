@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { TicTacToeProvider } from '../../models';
 import { GameConnect } from '../Game';
