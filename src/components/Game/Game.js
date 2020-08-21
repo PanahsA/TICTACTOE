@@ -50,6 +50,6 @@ const Game = () => {
   );
 };
 
-// const App= withPersistedState(Game)('tictactoe',initialState)
+// const App= withPersistedState(Game)('tictactoe',initialState) we could use this method to pass state data as props
 
 export default Game;
