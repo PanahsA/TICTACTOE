@@ -5,18 +5,14 @@ import Square from '../Square';
 import './board.css';
 
 const Board = ({ squares, makeMove }) => {
-
-  const renderSquare = (pos) => {
-
-    return (
-      <Square
-        value={squares[pos]}
-        onClick={() => {
-          makeMove(pos);
-        }}
-      ></Square>
-    );
-  };
+  const renderSquare = (pos) => (
+    <Square
+      value={squares[pos]}
+      onClick={() => {
+        makeMove(pos);
+      }}
+    ></Square>
+  );
 
   return (
     <div>
