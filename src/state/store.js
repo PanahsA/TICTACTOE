@@ -18,7 +18,7 @@ const retrievedState =
 const store = createStore(
   rootReducer,
   retrievedState,
-  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__(applyMiddleware(...middleware))
+ applyMiddleware(...middleware)
 );
 
 epicMiddleware.run(epics);
